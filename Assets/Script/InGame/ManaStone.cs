@@ -9,27 +9,14 @@ public enum ManaType
     Green,
     Blue,
     Orange,
-    
 }
 
-public class ManaStone
+public class ManaStone : MonoBehaviour
 {
-    private ManaType _manaType;
-    public ManaType _ManaType { get => _manaType; }
-
-    private int _row = -1;
-    private int _col = -1;
-
-
-    public void Init(ManaType manaType, int row, int col)
+    private Image stoneImg;
+    
+    public void SetManaStone(ManaType stoneType)
     {
-        _manaType = manaType;
-        _row = row;
-        _col = col;
-    }
-
-    public ManaStone(ManaType manaType, int row, int col)
-    {
-        Init(manaType, row, col);
+        
     }
 }
