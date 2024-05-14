@@ -17,6 +17,7 @@ public enum ManaType
     Green,
     Blue,
     Orange,
+    Yellow,
 }
 
 public class ManaStone : MonoBehaviour, BoardObject
@@ -42,7 +43,7 @@ public class ManaStone : MonoBehaviour, BoardObject
         }
     }
 
-    readonly Color[] colors = new Color[] { Color.white, Color.red, Color.green, Color.blue, Color.magenta };
+    readonly Color[] colors = new Color[] { Color.white, Color.red, Color.green, Color.blue, Color.magenta, Color.yellow };
     public void SetColor(ManaType type)
     {
         stoneImg.color = colors[(int)type];

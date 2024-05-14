@@ -653,6 +653,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1497753533}
     m_Modifications:
+    - target: {fileID: 1306138036574272345, guid: 8491827c67d88824f972448193458216, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306138036574272345, guid: 8491827c67d88824f972448193458216, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306138036574272345, guid: 8491827c67d88824f972448193458216, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2731095164006526877, guid: 8491827c67d88824f972448193458216, type: 3}
       propertyPath: m_Name
       value: ManaStone

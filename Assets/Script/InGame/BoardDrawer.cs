@@ -25,6 +25,9 @@ public class BoardDrawer : MonoBehaviour
 
     public void Init(GameBoard gameBoard, int _gameSizeRow, int _gameSizeCol)
     {
+        if (this.gameBoard == gameBoard)
+            return;
+
         this.gameBoard = gameBoard;
         this._gameSizeRow = _gameSizeRow;
         this._gameSizeCol = _gameSizeCol;
