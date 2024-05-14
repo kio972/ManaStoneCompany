@@ -43,10 +43,23 @@ public class ManaStone : MonoBehaviour, BoardObject
         }
     }
 
+    [SerializeField]
+    private Sprite[] sprites;
+    [SerializeField]
+    private Sprite[] popSprites;
+
     readonly Color[] colors = new Color[] { Color.white, Color.red, Color.green, Color.blue, Color.magenta, Color.yellow };
+
+    ManaType curType;
+
     public void SetColor(ManaType type)
     {
-        stoneImg.color = colors[(int)type];
+        //if (type == ManaType.None)
+        //    stoneImg.sprite = popSprites[(int)curType];
+        //else
+
+        stoneImg.sprite = sprites[(int)type];
+        curType = type;
     }
 
     public void OnClick()

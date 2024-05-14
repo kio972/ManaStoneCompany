@@ -59,6 +59,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4744c6afed20c4bbd95edd11e1c404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 7d47dbb8a50a70644bbe715144f4b004, type: 3}
+  - {fileID: 21300000, guid: 6a3acf8937cd92d4eb4469e32feca8e2, type: 3}
+  - {fileID: 21300000, guid: 7ba6a987446efbe46a9aef8410c3a621, type: 3}
+  - {fileID: 21300000, guid: 8ef201fa78be8824d9e08d160b4d1909, type: 3}
+  - {fileID: 21300000, guid: c57cc85696ea2784b9f527c09cb19805, type: 3}
+  - {fileID: 21300000, guid: e39d908e624329d498e8fa0c197bd0da, type: 3}
+  - {fileID: 21300000, guid: 83348b8cb2454b543b8df39af40b3be0, type: 3}
+  - {fileID: 21300000, guid: e6a2fd4664690ec479d988ba042f6526, type: 3}
+  - {fileID: 21300000, guid: 85cafd038af244a4984c31a1d2ef3a54, type: 3}
+  popSprites: []
 --- !u!114 &1306138036574272345
 MonoBehaviour:
   m_ObjectHideFlags: 0
