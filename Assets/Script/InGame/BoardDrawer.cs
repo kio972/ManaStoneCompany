@@ -20,6 +20,8 @@ public class BoardDrawer : MonoBehaviour
     private Transform _verticalCap;
     [SerializeField]
     private Transform horizontalCap;
+    [SerializeField]
+    private LayoutGroup layoutGroup;
 
     public void Init(GameBoard gameBoard, int _gameSizeRow, int _gameSizeCol)
     {

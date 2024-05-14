@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public interface BoardObject
 {
@@ -21,11 +22,14 @@ public enum ManaType
 public class ManaStone : MonoBehaviour, BoardObject
 {
     private Image stoneImg;
+    public Image _StoneImg { get => stoneImg; }
     private int rowIndex;
     private int colIndex;
 
     public int row { get => rowIndex; set => rowIndex = value; }
     public int col { get => colIndex; set => colIndex = value; }
+
+    private BoardDrawer drawer;
 
     private TestInput input;
     private TestInput _Input

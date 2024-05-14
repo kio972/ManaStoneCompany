@@ -21,9 +21,16 @@ public class GameBoard : MonoBehaviour
     private bool[,] visited;
     private int count;
     private List<(int row, int col)> cords;
+    private int loop = 0;
 
     [SerializeField]
     private BoardDrawer drawer;
+
+    private bool inputLock = false;
+    public bool _InputLock { get => inputLock; }
+
+    private int score = 0;
+    public int _Score { get => score; }
 
     public void DFS(ManaType type, int row, int col)
     {
@@ -47,6 +54,13 @@ public class GameBoard : MonoBehaviour
         foreach((int row, int col) cord in cords)
         {
             _boardData[cord.row, cord.col] = ManaType.None;
+        }
+
+        if(isScore)
+        {
+            int match = cords.Count;
+            int loop = this.loop;
+            score += (match * 10) * loop;
         }
     }
 
@@ -76,6 +90,7 @@ public class GameBoard : MonoBehaviour
 
     public void SearchBoard()
     {
+        loop++;
         bool isPopped = false;
         visited = new bool[_gameSizeRow, _gameSizeCol];
         for (int i = 0; i < _gameSizeRow; i++)
@@ -99,6 +114,13 @@ public class GameBoard : MonoBehaviour
 
         if (isPopped)
             Invoke("FillBoard", 0.3f);
+        else
+        {
+            loop = 0;
+            inputLock = false;
+            Debug.Log("InputUnLocked");
+        }
+
         drawer?.DrawBoard();
     }
 
@@ -154,6 +176,8 @@ public class GameBoard : MonoBehaviour
 
     public void RotateBoard(int row, int col, int direction)
     {
+        inputLock = true;
+        Debug.Log("InputLocked");
         int size;
         
         if(direction == 0 || direction == 1)
@@ -221,12 +245,8 @@ public class GameBoard : MonoBehaviour
 
     public void Init()
     {
+        score = 0;
         SetBoardStatus();
-
     }
 
-    private void Awake()
-    {
-        Init();
-    }
 }
